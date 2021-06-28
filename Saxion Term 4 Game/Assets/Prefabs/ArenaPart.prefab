@@ -663,8 +663,8 @@ GameObject:
   m_Name: FrontBottomPole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &6504914233253466036
 Transform:
@@ -1463,8 +1463,8 @@ GameObject:
   m_Name: FrontMiddlePole
   m_TagString: BounceCollider
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &281716627912031178
 Transform:

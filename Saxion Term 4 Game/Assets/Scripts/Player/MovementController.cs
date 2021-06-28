@@ -28,6 +28,9 @@ public class MovementController : MonoBehaviour
 
     private RaycastHit hit;
 
+    public AudioSource mainMusic;
+    public AudioSource jumpSound;
+
     void Start()
     {
         speed = 5;
@@ -69,6 +72,8 @@ public class MovementController : MonoBehaviour
             rb.AddForce(0, jumpForce + (speed * 0.75f), 0, ForceMode.Impulse);
 
             speed += 1;
+
+            jumpSound.Play();
         }
 
         if(Input.GetKeyDown(KeyCode.Space) && canBouncePlayer && isLookingAtBounceObject)
@@ -81,6 +86,10 @@ public class MovementController : MonoBehaviour
         if(isJumping)
         {
             moveVector = jumpDirection * speed * 1.5f;
+            if(jumpDirection == Vector3.zero)
+            {
+                speed = 5;
+            }
         }
     }
 
@@ -111,6 +120,8 @@ public class MovementController : MonoBehaviour
 
         rb.AddForce(0, jumpForce + (speed * 0.75f), 0, ForceMode.Impulse);
 
+        jumpSound.Play();
+
         canBouncePlayer = false;           
     }
 
@@ -127,6 +138,16 @@ public class MovementController : MonoBehaviour
         {
             bounceDirection = collision.contacts[0].normal;
             canBouncePlayer = true;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        //Death
+        if(other.transform.name == "DeathTrigger")
+        {
+            mainMusic.Stop();
+            this.gameObject.GetComponent<KillPlayer>().Kill();
         }
     }
 
@@ -148,6 +169,11 @@ public class MovementController : MonoBehaviour
             {
                 speed *= 0.98f;
             }
+        }
+
+        if(collision.gameObject.transform.tag == "Enemy")
+        {
+            speed = 5;
         }
 
         //9 is the "BounceAble" layer

@@ -179,8 +179,8 @@ GameObject:
   m_Name: CrossPart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &8085321142194122935
 Transform:
@@ -344,8 +344,8 @@ GameObject:
   m_Name: BottomPoleRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &5125554353198911800
 Transform:
@@ -440,8 +440,8 @@ GameObject:
   m_Name: FrontPartRight
   m_TagString: BounceCollider
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1338427209371757046
 Transform:
@@ -839,8 +839,8 @@ GameObject:
   m_Name: FrontPartTop
   m_TagString: BounceCollider
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2251778097744678253
 Transform:
@@ -1017,8 +1017,8 @@ GameObject:
   m_Name: FrontPartLeft
   m_TagString: BounceCollider
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7472682165256524118
 Transform:
@@ -1112,8 +1112,8 @@ GameObject:
   m_Name: CrossPart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4707665020960608731
 Transform:
@@ -1359,8 +1359,8 @@ GameObject:
   m_Name: TopPole
   m_TagString: BounceCollider
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &140382271759943686
 Transform:
@@ -1537,8 +1537,8 @@ GameObject:
   m_Name: Gate
   m_TagString: BounceCollider
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &6079373135713654565
 Transform:
@@ -2047,8 +2047,8 @@ GameObject:
   m_Name: BottomPoleLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &9126245077846484556
 Transform:

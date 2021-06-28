@@ -12,11 +12,16 @@ public class BigEnemyAttackController : MonoBehaviour
 
     List<GameObject> sawBlades = new List<GameObject>();
 
+    public float armRotationSpeed;
+    public float armRotationStartDistance;
+
     void Start()
     {
         player = GameObject.Find("Player");
+        armRotationSpeed = 0.75f;
+        armRotationStartDistance = 30;
 
-        foreach (Transform childObj in transform.GetChild(4).transform.GetChild(2).transform.GetChild(0).transform.GetChild(1))
+        foreach (Transform childObj in transform.GetChild(3).transform.GetChild(2).transform.GetChild(0).transform.GetChild(1))
         {
             if (childObj.name == "sawBlades")
             {
@@ -33,18 +38,18 @@ public class BigEnemyAttackController : MonoBehaviour
 
     void SawBladeAttack()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) < 30)
+        if (Vector3.Distance(transform.position, player.transform.position) < 40)
         {
             if (player.transform.position.y > 5 && player.transform.position.y > sawBladeBox.transform.position.y && sawBladeBox.transform.position.y < 12)
             {
                 MoveArmsUp();
             }
-            if (player.transform.position.y < sawBladeBox.transform.position.y && sawBladeBox.transform.position.y > 2)
+            if (player.transform.position.y < sawBladeBox.transform.position.y && sawBladeBox.transform.position.y > 3)
             {
                 MoveArmsDown();
             }
         }
-        else if(sawBladeBox.transform.position.y > 2)
+        else if(sawBladeBox.transform.position.y > 3)
         {
             MoveArmsDown();
         }
@@ -52,8 +57,8 @@ public class BigEnemyAttackController : MonoBehaviour
 
     void MoveArmsUp()
     {
-        armsCilincer.transform.Rotate(0, 0.75f, 0);
-        sawBladeBox.transform.Rotate(0, -0.75f, 0);
+        armsCilincer.transform.Rotate(0, armRotationSpeed, 0);
+        sawBladeBox.transform.Rotate(0, -armRotationSpeed, 0);
     }
 
     void MoveArmsDown()
